@@ -46,7 +46,7 @@ window.addEventListener("load",init,false);
             // 2) 회원 존재 유무 체크
             if(idValue.trim() == ID && pwValue.trim() == PW){
                 //메인 페이지로 이동
-                window.location.href = "main-login.html";
+                window.location.href = "login-index.html";
             }else {
                 pwMsg.innerHTML="가입하지 않은 아이디이거나, 잘못된 비밀번호 입니다.";
                 pwMsg.style.color = "red";
