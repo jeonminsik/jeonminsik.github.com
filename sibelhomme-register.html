@@ -7,8 +7,79 @@
     <title>SI BEL HOMME</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/sibelhomme.css">
+    <style>
+    /* 회원가입 css */
+.container {
+    display: flex;
+    justify-content: center;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 600px;
+}
+.content div {
+    flex:1 1 300px;
+}
+.content div:nth-child(3),
+.content div:nth-child(6),
+.content div:nth-child(9),
+.content div:nth-child(12),
+.content div:nth-child(15),
+.content div:nth-child(18) {
+  border:1px solid gray;
+  padding:1px;
+  padding-left:10px;
+  background-color:white;
+}
+.join-title {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+button,select {
+    width: 100%;
+}
+input {
+    width: 250px;
+    border: none;
+}
+input[type=radio] {
+    width: auto;
+}
+#joinBtn {
+    background-color: #333;
+    color: #fff;
+    font-weight: 900;
+    border: 1px solid bisque;
+    padding: 10px;
+}
+.submitbtn {
+    padding-top: 30px;
+    border-top: 2px solid gray;
+}
+.fa-envelope, .fa-unlock, .fa-unlock-alt, .fa-mobile-alt{
+    padding: 5px 5px;
+}
+label {
+    vertical-align: top;
+    color: #333;
+    font-size: 12px;
+}
+#region {
+    font-size: 12px;
+}
+.errmsg {
+    color: red;
+    font-Size: 0.7em;
+}
+    </style>
     <script src="js/mobilemenu.js"></script>
-    <script src="js/login-logout.js"></script>
+    <script src="js/register.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -35,8 +106,8 @@
                 </div>
             <div class="user-area">
                 <ul>
-                    <li><a class="logout" href="main-logout.html">LOG-OUT</a></li>
-                    <li><a href="">PROFILE</a></li>
+                    <li><a href="sibelhomme-login.html">LOG-IN</a></li>
+                    <li><a href="sibelhomme-register.html">REGISTER</a></li>
                     <li><a href="">CART </a><span>0</span></li>
                     <li><a href="">MY PAGE</a></li>
                     <li><a href="">ORDER</a></li>
@@ -50,8 +121,7 @@
                         <a href="https://www.instagram.com/sii.ki/" target="_blank">
                             <i class="fab fa-instagram fa-2x"></i>
                         </a>
-                    </div>
-                    
+                    </div> 
                 <div class="cs-center">
                     <ul>
                         <li>070-1234-5678</li>
@@ -66,15 +136,15 @@
             </nav>
             <a href="" class="tab"><span>tab</span><i class="fas fa-bars fa-2x"></i></a>
             <div class="topin">
-                <a href="main-login.html"><img src="img/LOGO4.png" alt=""></a>
+                <a href="main-logout.html"><img src="img/LOGO4.png" alt=""></a>
             </div>
-                <div class="searchbox">
-                    <a href=""><i class="fas fa-search fa-2x"></i></a>
-                </div>
+            <div class="searchbox">
+                <a href=""><i class="fas fa-search fa-2x"></i></a>
+            </div>
         </div>
         <div class="container">
             <div class="dim">
-
+            
             </div>
             <div class="leftMenu">
                 <div class="product">
@@ -110,8 +180,8 @@
             </div>
             <div class="rightMenu">
                 <ul>
-                    <li class="logout1"><a href="main-logout.html">LOG-OUT</a></li>
-                    <li><a href="">PROFILE</a></li>
+                    <li><a href="sibelhomme-login.html">LOG-IN</a></li>
+                    <li><a href="sibelhomme-register.html">REGISTER</a></li>
                     <br>
                     <li><a href="">CART </a><span>0</span></li>
                     <li><a href="">MY PAGE</a></li>
@@ -135,122 +205,51 @@
                 </div>
             </div>
             <div class="content">
-                <div id="contents">
-                    <h2>BEST</h2>
-                    <hr>
-                    <div class="view">
-                        <ul>
-                            <li><a href=""><img src="img/blazer.jpg" alt="">블레이져<br>￦96,000</a></li>
-                            <li><a href=""><img src="img/checkcoat.jpg" alt="">체크코트<br>￦112,000</a></li>
-                            <li><a href=""><img src="img/widedenim.jpg" alt="">와이드데님<br>￦44,000</a></li>
-                            <li><a href=""><img src="img/top.jpg" alt="">니트<br>￦33,000</a></li>
-                            <li><a href=""><img src="img/shortpadding.jpg" alt="">숏패딩<br>￦87,000</a></li>
-                            <li><a href=""><img src="img/cashmeer.jpg" alt="">캐시미어하프넥니트<br>48,000</a></li>
-                        </ul>
-                    </div>
-                    <h2>NEW</h2>
-                    <hr>
-                    <div class="view">
-                        <ul>
-                            <li>
-                                <div>
-                                    <a href="">
-                                        <img src="img/outer.jpg" alt="">
-                                        무스탕<br>￦142,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="">
-                                        <img src="img/acc.jpg" alt="">키링<br>￦21,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="">
-                                        <img src="img/jean.jpg" alt="">슬랙스<br>￦42,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="">
-                                        <img src="img/outer2.jpg" alt="">코트<br>￦119,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li >
-                                <div>
-                                    <a href="">
-                                        <img src="img/top.jpg" alt="">니트<br>￦33,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="">
-                                        <img src="img/shoes.jpg" alt="">워커<br>￦199,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href=""><img src="img/top2.jpg" alt="">니트2<br>￦29,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href=""><img src="img/jean2.jpg" alt="">바지<br>￦40,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href=""><img src="img/jean3.jpg" alt="">청바지<br>￦55,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href=""><img src="img/lobecoat.jpg" alt="">로브코트<br>￦109,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href=""><img src="img/longpadding.jpg" alt="">롱패딩<br>￦137,000
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href=""><img src="img/arcmoostang.jpg" alt="">아크무스탕<br>￦155,000
-                                    </a>
-                                </div>
-                            </li>
-                        </ul> 
-                    </div>
-                <h2>ACC</h2>
-                <hr>
-                <div class="view">
-                    <ul>
-                        <li><a href=""><img src="img/acc.jpg" alt="">키링<br>￦21,000</a></li>
-                        <li><a href=""><img src="img/blet.jpg" alt="">벨트<br>￦29,000</a></li>
-                        <li><a href=""><img src="img/keyring.jpg" alt="">체인키링<br>￦19,000</a></li>
-                        <li><a href=""><img src="img/neck.jpg" alt="">머플러<br>￦25,000</a></li>
-                        <li><a href=""><img src="img/warmer.jpg" alt="">워머<br>￦15,000</a></li>
-                        <li><a href=""><img src="img/tabishacks.jpg" alt="">타비삭스<br>￦3,000</a></li>
-                    </ul>
+                <div><h3 class="join-title">REGISTER</h3></div>
+                <div><label for="id">ID</label></div>
+                <div><input type="text" name="id" id="id" placeholder="아이디 입력"><i class="far fa-envelope fa-lg"></i></div>
+                <div><span class="errmsg" id="id_errmsg"></span></div>
+                
+                <div><label for="pw">PASSWORD</label></div>
+                <div><input type="password" name="pw" id="pw" placeholder="비밀번호 입력"><i class="fas fa-unlock fa-lg"></i></div>
+                <div><span class="errmsg" id="pw_errmsg"></span></div>
+                
+                <div><label for="pwChk">PASSWORD CHECK</label></div>
+                <div><input type="password" id="pwChk" placeholder="비밀번호 확인"><i class="fas fa-unlock-alt fa-lg"></i></div>
+                <div><span class="errmsg" id="pwChk_errmsg"></span></div>
+                
+                <div><label for="tel">MOBILE</label></div>
+                <div><input type="tel" name="tel" id="tel" placeholder="010-0000-0000"><i class="fas fa-mobile-alt fa-lg"></i></div>
+                <div><span class="errmsg" id="tel_errmsg"></span></div>
+                
+                <div><label for="region">ADDRESS</label></div>
+                <div>
+                    <select name="region" id="region">
+                        <option value="">= SELECT =</option>
+                        <option value="서울">서울</option>
+                        <option value="경기">경기</option>
+                        <option value="대구">대구</option>
+                        <option value="부산">부산</option>
+                        <option value="울산">울산</option>
+                    </select>
+                </div>
+                <div><span class="errmsg" id="region_errmsg"></span></div>
+                
+                <div><label for="men">GENDER</label></div>
+                <div>
+                    <input type="radio" name="gender" id="men"><label for="men">MALE</label>
+                    <input type="radio" name="gender" id="women"><label for="women">FEMALE</label>
+                </div>
+                <div><span class="errmsg" id="gender_errmsg"></span></div>
+                
+                <div class="submitbtn"><button type="submit" id="joinBtn">SUBMIT</button></div>
                 </div>
             </div>
         </div> 
                 <div class="footer">
                     <div id="footer">
                         <div class="link">
-                            <div id="foot-logo"><a href="main-login.html">SI BEL HOMME</a></div>
+                            <div id="foot-logo"><a href="main-logout.html">SI BEL HOMME</a></div>
                             <div id="notice">
                                 <ul>
                                     <li><a href="">ABOUT US</a></li>
